@@ -2,6 +2,12 @@
     font-family: "verdana";
 }
 
+h1 {
+    text-align: center;
+    padding-top: 30px;
+    color: #F2CE1B;
+}
+
 .container{
     border: 1px solid #E1E1E1;
     width: 100%;
@@ -24,7 +30,7 @@
 .search-container {
     display: flex;
     justify-content: center;
-    margin-top: 25px;
+    margin-top: 35px;
 }
 
 .button {
@@ -40,4 +46,5 @@
 .div-message h2 {
     font-size: 1rem;
     text-align: center;
+    margin-top: 40px;
 }
