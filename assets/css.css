@@ -1,0 +1,43 @@
+*{
+    font-family: "verdana";
+}
+
+.container{
+    border: 1px solid #E1E1E1;
+    width: 100%;
+    float: left;
+}
+
+.sub-container{
+    float: left;
+    margin: 30px 10px;
+}
+
+.user-avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    float: left;
+    margin: 10px 10px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.button {
+    padding: 10px;
+}
+
+.button:hover {
+    background-color: #F2CE1B;
+    color: white;
+    border-color: #F2CE1B;
+}
+
+.div-message h2 {
+    font-size: 1rem;
+    text-align: center;
+}
