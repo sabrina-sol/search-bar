@@ -57,7 +57,7 @@ function search (e) {
     );
     //Render in HTML
     if (search_name_result.length + search_address_result.length + search_phone_result.length + search_age_result.length === 0) {
-        h2_messages.innerText = "Sorry, we haven't found any results. Please try again";
+        h2_messages.innerText = "No results, please review your search or try a different one";
     } else if (search_value == "") {
         h2_messages.innerText = "You didn't write anything! Please try again"
     } else {
