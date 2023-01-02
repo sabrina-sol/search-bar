@@ -38,7 +38,19 @@ function calculate_age(birthday) {
     let now = new Date();
     let birthday_date = new Date(birthday);
     let age = now.getFullYear() - birthday_date.getFullYear();
-    return age.toString();
+    if (birthday_date.getMonth < now.getMonth) {
+        return age.toString();
+        } else if (birthday_date.getMonth == now.getMonth) {
+            if (birthday_date.getDay < now.getDay) {
+                return age.toString();
+            } else {
+                age++
+                return age.toString();
+            }
+        } else {
+        age++
+        return age.toString();
+    }
 }
 
 //Search match between the input value and the data
@@ -61,7 +73,9 @@ function search (e) {
     } else if (search_value == "") {
         h2_messages.innerText = "You didn't write anything! Please try again"
     } else {
-        for (let result of search_name_result) {
+        search_results = [...search_name_result, ...search_phone_result, ...search_address_result, ...search_age_result];
+        
+        /*for (let result of search_name_result) {
             search_results.push(result)
         }
         for (let result of search_phone_result) {
@@ -72,7 +86,8 @@ function search (e) {
         }
         for (let result of search_age_result) {
             search_results.push(result)
-        }
+        }*/
+        
         //Erase duplicates
         search_results = objects_data.filter(element => search_results.some(e => element._id === e._id))
         //Show results
